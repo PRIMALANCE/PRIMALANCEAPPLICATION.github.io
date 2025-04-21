@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #070706;
+      margin-top: 40px;
+    }
+
+    table {
+      background-color: #fff;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 900px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="time"], textarea, select {
+      width: 95%;
+      padding: 6px;
+      margin-top: 5px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .form-buttons {
+      text-align: center;
+    }
+
+    .form-buttons input {
+      padding: 10px 20px;
+      font-weight: bold;
+      margin: 10px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .submit-btn {
+      background-color: #27ae60;
+      color: white;
+    }
+
+    .reset-btn {
+      background-color: #c0392b;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Customer Information</h1>
+  <form>
+    <table>
+      <tr>
+        <td><label for="fullname">Full Name:</label></td>
+        <td><input type="text" id="fullname" placeholder="Type your name here"></td>
+      </tr>
+      <tr>
+        <td><label for="address">Complete Address:</label></td>
+        <td><input type="text" id="address" placeholder="Type your address here"></td>
+      </tr>
+      <tr>
+        <td><label for="number">Contact Number:</label></td>
+        <td><input type="text" id="number" placeholder="+639072244292"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email Address:</label></td>
+        <td><input type="email" id="email" placeholder="juandelacruz@gmail.com"></td>
+      </tr>
+      <tr>
+        <td><label for="desc">Description (how to get to your place):</label></td>
+        <td><textarea name="desc" rows="4" cols="40" placeholder="Enter directions or landmarks..."></textarea></td>
+      </tr>
+      <tr>
+        <td><label for="date">Date:</label></td>
+        <td><input type="date" id="date"> <input type="time" id="time"></td>
+      </tr>
+    </table>
+
+    <h1>Order Form</h1>
+    <table>
+      <tr>
+        <td><label>Burgers:</label></td>
+        <td>
+          <input type="checkbox"> Single Patty<br>
+          <input type="checkbox"> Double Patty<br>
+          <input type="checkbox"> With Cheese<br>
+          <input type="checkbox"> Coleslaw<br>
+          <input type="checkbox"> Tomato<br>
+          <input type="checkbox"> Onion<br>
+          <input type="checkbox"> Cucumber<br>
+          <input type="checkbox"> Bacon
+        </td>
+      </tr>
+      <tr>
+        <td><label>Choice of Bun:</label></td>
+        <td>
+          <input type="radio" name="bun"> White Bun<br>
+          <input type="radio" name="bun"> Wheat Bun<br>
+          <input type="radio" name="bun"> Honey Oat<br>
+          <input type="radio" name="bun"> Sugar-Free
+        </td>
+      </tr>
+      <tr>
+        <td><label>Burger Quantity:</label></td>
+        <td><input type="number" min="1" placeholder="Quantity"></td>
+      </tr>
+      <tr>
+        <td><label>Pasta Sauce:</label></td>
+        <td>
+          <input type="checkbox"> Carbonara<br>
+          <input type="checkbox"> Pesto<br>
+          <input type="checkbox"> Spaghetti<br>
+          <input type="checkbox"> Extra Cheese<br>
+          <input type="checkbox"> Extra Sauce
+        </td>
+      </tr>
+      <tr>
+        <td><label>Pasta Quantity (per box):</label></td>
+        <td><input type="number" min="1" placeholder="Quantity"></td>
+      </tr>
+      <tr>
+        <td><label>Fries:</label></td>
+        <td>
+          Size:
+          <select>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </select><br><br>
+          Flavor:<br>
+          <input type="checkbox"> BBQ<br>
+          <input type="checkbox"> Cheese<br>
+          <input type="checkbox"> Sour Cream<br><br>
+          Quantity: <input type="number" min="1" placeholder="Quantity">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Drinks:</label></td>
+        <td>
+          Type: <input type="text" placeholder="e.g. Coke, Iced Tea"><br><br>
+          Size:
+          <select>
+            <option>Small</option>
+            <option>Medium</option>
+            <option>Large</option>
+          </select><br><br>
+          Quantity: <input type="number" min="1" placeholder="Quantity">
+        </td>
+      </tr>
+      <tr>
+        <td><label>Delivery Option:</label></td>
+        <td>
+          <input type="radio" name="delivery"> Delivery<br>
+          <input type="radio" name="delivery"> Pick-up
+        </td>
+      </tr>
+      <tr>
+        <td><label>Feedback:</label></td>
+        <td><textarea rows="4" cols="40" placeholder="How can we improve the ordering form?"></textarea></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <input type="submit" value="Submit Form" class="submit-btn">
+      <input type="reset" value="Clear Form" class="reset-btn">
+    </div>
+
+  </form>
+
+</body>
+</html>
